@@ -235,3 +235,9 @@ func (rl *RateLimiter) UpdateClient(clientID string, capacity, rate int) {
 	}
 }
 ```
+
+### How working
+
+![first](/pictures/image.png)
+![Second](/pictures/image1.png) 
+![Third](/pictures/image2.png)
