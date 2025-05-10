@@ -14,7 +14,7 @@ Simple HTTP load balancer with rate limiting implemented in Go.
 
 ### Prerequisites
 
-- Go 1.21+
+- Go 1.21 (and only him if you want to use docker)
 - Docker (optional)
 
 ### Running locally
