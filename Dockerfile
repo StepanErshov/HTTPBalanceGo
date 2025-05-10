@@ -3,7 +3,7 @@ FROM golang:1.21 as builder
 WORKDIR /app
 
 COPY go.mod .
-RUN cat go.mod  # Для проверки содержимого файла
+RUN cat go.mod
 RUN go mod download || true
 
 COPY . .
