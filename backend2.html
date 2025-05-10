@@ -1,10 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Backend 2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend 2 | Cloud Load Balancer</title>
+    <style>
+        :root {
+            --primary: #7209b7;
+            --secondary: #560bad;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+        .card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            max-width: 500px;
+            transform: translateY(0);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 0.8s ease-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        h1 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .server-info {
+            background: rgba(114, 9, 183, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .pulse {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #b5179e;
+            box-shadow: 0 0 0 0 rgba(181, 23, 158, 0.7);
+            animation: pulse 1.5s infinite;
+            margin-right: 10px;
+        }
+        .tech-badge {
+            display: inline-block;
+            background: rgba(114, 9, 183, 0.2);
+            color: var(--primary);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 5px;
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(181, 23, 158, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(181, 23, 158, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(181, 23, 158, 0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
-    <h1>Backend Server 2</h1>
-    <p>This is the second backend server</p>
+    <div class="card">
+        <h1>Backend Server 2</h1>
+        <p>This high-performance node is part of your load-balanced cluster</p>
+        
+        <div class="server-info">
+            <p><span class="pulse"></span> Status: <strong>Active</strong></p>
+            <div>
+                <span class="tech-badge">Go 1.21</span>
+                <span class="tech-badge">Nginx</span>
+                <span class="tech-badge">Docker</span>
+                <span class="tech-badge">Cloud</span>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
