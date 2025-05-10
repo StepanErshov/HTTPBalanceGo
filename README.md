@@ -43,7 +43,7 @@ Simple HTTP load balancer with rate limiting implemented in Go.
     docker-compose up --build
     ```
 
-### Testing
+## Testing
 
 Run unit tests:
 ```bash
@@ -164,7 +164,7 @@ func BenchmarkLoadBalancer(b *testing.B) {
 }
 ```
 
-### Additional improvements
+## Additional improvements
 
 1. Support for multiple balancing algorithms:
 ```go
@@ -236,7 +236,7 @@ func (rl *RateLimiter) UpdateClient(clientID string, capacity, rate int) {
 }
 ```
 
-### How working
+## How working
 
 ![first](/pictures/image.png)
 ![Second](/pictures/image1.png) 
