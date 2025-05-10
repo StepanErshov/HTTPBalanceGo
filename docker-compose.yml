@@ -4,8 +4,10 @@ services:
     ports:
       - "8080:8080"
     depends_on:
-      - backend1
-      - backend2
+      backend1:
+        condition: service_healthy
+      backend2:
+        condition: service_healthy
 
   backend1:
     image: nginx
@@ -13,6 +15,11 @@ services:
       - "8081:80"
     volumes:
       - ./backend1.html:/usr/share/nginx/html/index.html
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
 
   backend2:
     image: nginx
@@ -20,3 +27,8 @@ services:
       - "8082:80"
     volumes:
       - ./backend2.html:/usr/share/nginx/html/index.html
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
