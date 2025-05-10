@@ -36,7 +36,7 @@ Simple HTTP load balancer with rate limiting implemented in Go.
     ./loadbalancer --config config.json
     ```
 
-### Running with Docker
+### Running with Docker(The best option)
 
 1. Build and run with Docker Compose:
     ```bash
