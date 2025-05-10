@@ -20,6 +20,9 @@ Simple HTTP load balancer with rate limiting implemented in Go.
 ### Running locally
 
 1. Clone the repository
+	```bash 
+	git clone "https://github.com/StepanErshov/HTTPBalanceGo.git"
+	```
 
 2. Build the application:
 
