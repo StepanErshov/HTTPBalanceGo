@@ -1,0 +1,7 @@
+{
+    "port": "8080",
+    "backends": [
+      "http://backend1:80",
+      "http://backend2:80"
+    ]
+  }

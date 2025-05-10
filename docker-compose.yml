@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  loadbalancer:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - backend1
+      - backend2
+    environment:
+      - PORT=8080
+
+  backend1:
+    image: nginx
+    ports:
+      - "8081:80"
+    volumes:
+      - ./backend1.html:/usr/share/nginx/html/index.html
+
+  backend2:
+    image: nginx
+    ports:
+      - "8082:80"
+    volumes:
+      - ./backend2.html:/usr/share/nginx/html/index.html
