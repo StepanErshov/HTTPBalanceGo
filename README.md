@@ -42,10 +42,7 @@ Simple HTTP load balancer with rate limiting implemented in Go.
     ```bash
     docker-compose up --build
     ```
-2. If you want to compile the file in .exe format then do the following
-	```bash
-	go build -o loadbalancer .
-	```
+
 ### Testing
 
 Run unit tests:
